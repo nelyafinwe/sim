@@ -1,0 +1,47 @@
+#!/bin/python
+from numpy import *
+from pylab import *
+from sys import *
+
+## PARAMETERS
+I = 100 # number of floors. adimentional
+H = 1 # pile height. meters
+l1 = 200 # side length 1. meters
+l2 = 660 # side length 2. meters
+dt = 3600 # time constant. seconds
+dx = float(1/I) # meters
+SIMULATION_TIME = 30*24*3600 # simulation length. seconds. 
+SIMULATION_STEPS = int(SIMULATION_TIME/dt) # adimentional.
+rho = 1000 # flow density. kg/m³.
+R_ef = 1 # effective hydraulic radius
+g = 9.8 # gravity constantat. meters / second²
+
+## RESULTS (empty vars)
+#
+d1=zeros( (I, SIMULATION_STEPS)) # diffussion array 1:
+d2=zeros( (I, SIMULATION_STEPS)) # diffussion array 2:
+AA = zeros(I) #area array for each floor.
+
+#print (AA)
+#print (d1)
+#a = math.pow(2,4)
+exit(0)
+
+## DERIVED RESULTS
+# h_t = m_t / rho*A
+# v_t = 2 * (p_t / m_t) - v_0
+# p_t = p_0 + 
+ 
+## Equations
+# m_t[i,k+1] = m_t[i,k] + rho*pi*R_ef*h_t^2
+
+
+# ACTUAL SIMULATION: DIFUSION=d1, DIFUSION=d2, CONVECCION=cc
+print ('init')
+for k in range(0, int(SIMULATION_TIME/dt)):
+	for i in range(0,I):
+		print (str(i)+'_'+str(k))
+			
+print ('end!')
+
+# ACTUAL SIMULATION: CHEMICAL REACTIONS: c(j={
